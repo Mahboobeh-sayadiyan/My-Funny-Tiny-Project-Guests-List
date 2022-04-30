@@ -1,0 +1,9 @@
+.container {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 95%;
+  max-width: 50rem;
+  background-color: rgb(240, 255, 255);
+  border: 0.2rem solid rgb(253, 248, 248);
+  border-radius: 1rem;
+}

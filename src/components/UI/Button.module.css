@@ -1,0 +1,27 @@
+.button {
+  font: inherit;
+  border: 0.3rem solid white;
+  border-radius: 0.5rem;
+  background: rgb(123, 197, 193);
+  color: white;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  width: auto;
+  margin: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+.button.invisible {
+  visibility: hidden;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: rgb(123, 197, 193);
+  border-color: rgb(123, 197, 193);
+}
+
+.button:focus {
+  outline: none;
+}

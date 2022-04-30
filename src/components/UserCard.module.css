@@ -1,0 +1,27 @@
+.card {
+  margin: 0.5rem;
+  width: 98%;
+  /* max-width: 50rem; */
+  background-color: rgb(123, 197, 193);
+  padding: 1rem;
+  border: 0.2rem solid rgb(253, 248, 248);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+.card.invisible {
+  background-color: rgb(255, 240, 102);
+  color: rgb(123, 197, 193);
+  padding: 0.2rem;
+}
+.card h4 {
+  margin: 0;
+  color: white;
+  display: inline-block;
+  margin: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
