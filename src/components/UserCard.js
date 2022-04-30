@@ -4,6 +4,7 @@ import Button from "./UI/Button";
 
 function UserCard(props) {
   const visible = props.user.visible;
+  console.log(visible);
   const removeUserHandler = () => {
     props.onRemovecurrentUser(props.index);
   };

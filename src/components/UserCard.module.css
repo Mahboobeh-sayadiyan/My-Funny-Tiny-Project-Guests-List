@@ -12,7 +12,7 @@
 .card.invisible {
   background-color: rgb(255, 240, 102);
   color: rgb(123, 197, 193);
-  padding: 0.2rem;
+  grid-template-columns: 3fr 1fr;
 }
 .card h4 {
   margin: 0;

@@ -12,7 +12,7 @@
   text-align: center;
 }
 .button.invisible {
-  visibility: hidden;
+  display: none;
 }
 
 .button:hover,
