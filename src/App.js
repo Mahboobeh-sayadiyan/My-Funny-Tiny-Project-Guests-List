@@ -5,7 +5,6 @@ import Overlay from "./components/UI/Overlay";
 import MessageModal from "./components/UI/MessageModal";
 
 function App() {
-  localStorage.removeItem("userInformation");
   const [errorMessage, seterrorMessage] = useState("");
   const storageData = JSON.parse(localStorage.getItem("userInformation"));
   const [users, setUsers] = useState(storageData != null ? storageData : []);
