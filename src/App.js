@@ -32,9 +32,16 @@ function App() {
     localStorage.removeItem("userInformation");
     localStorage.setItem("userInformation", JSON.stringify(newUsers));
   };
-  const ConfirmUserHandler = (index) => {
+  const confirmUserHandler = (index) => {
     const newUsers = [...users];
     newUsers[index].visible = 0;
+    setUsers(newUsers);
+    localStorage.removeItem("userInformation");
+    localStorage.setItem("userInformation", JSON.stringify(newUsers));
+  };
+  const unConfirmUserHandler = (index) => {
+    const newUsers = [...users];
+    newUsers[index].visible = 1;
     setUsers(newUsers);
     localStorage.removeItem("userInformation");
     localStorage.setItem("userInformation", JSON.stringify(newUsers));
@@ -54,7 +61,8 @@ function App() {
       />
       <Users
         onRemoveUser={RemoveUserHandler}
-        onConfirmUser={ConfirmUserHandler}
+        onConfirmUser={confirmUserHandler}
+        onUnConfirmUser={unConfirmUserHandler}
         users={users}
       />
     </div>

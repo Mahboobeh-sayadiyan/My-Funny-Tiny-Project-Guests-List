@@ -8,3 +8,5 @@ https://guests-list.netlify.app
 ## Framework -> React.js
 
 ## Application functionality
+
+After you leave page your data will be saved on your browser local storage and will be accessible in future browser sessions.

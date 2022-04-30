@@ -10,12 +10,16 @@ function Users(props) {
   const confirmcurrentUserHandler = (index) => {
     props.onConfirmUser(index);
   };
+  const unConfirmcurrentUserHandler = (index) => {
+    props.onUnConfirmUser(index);
+  };
   return (
     <Container>
       {users.map((user, index) => (
         <UserCard
           onRemovecurrentUser={removecurrentUserHandler}
           onconfirmcurrentUser={confirmcurrentUserHandler}
+          onUnConfirmcurrentUser={unConfirmcurrentUserHandler}
           key={index}
           user={user}
           index={index}

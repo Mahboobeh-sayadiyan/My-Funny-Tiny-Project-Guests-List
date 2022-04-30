@@ -10,6 +10,9 @@ function UserCard(props) {
   const confirmUserHandler = () => {
     props.onconfirmcurrentUser(props.index);
   };
+  const unConfirmUserHandler = () => {
+    props.onUnConfirmcurrentUser(props.index);
+  };
   return (
     <div className={`${styles.card} ${!visible ? styles.invisible : ""}`}>
       <h4>
@@ -21,6 +24,9 @@ function UserCard(props) {
       </Button>
       <Button onclick={confirmUserHandler} visible={visible}>
         Confirm
+      </Button>
+      <Button onclick={unConfirmUserHandler} visible={visible === 0 ? 1 : 0}>
+        UnConfirm
       </Button>
     </div>
   );
