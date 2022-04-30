@@ -20,13 +20,13 @@ function UserCard(props) {
         Guest {props.index + 1}- {props.user.guest} ({props.user.guestCount}{" "}
         People) - {props.user.phoneNumber}
       </h4>
-      <Button onclick={removeUserHandler} visible={visible}>
+      <Button onClick={removeUserHandler} visible={visible}>
         Remove
       </Button>
-      <Button onclick={confirmUserHandler} visible={visible}>
+      <Button onClick={confirmUserHandler} visible={visible}>
         Confirm
       </Button>
-      <Button onclick={unConfirmUserHandler} visible={visible === 0 ? 1 : 0}>
+      <Button onClick={unConfirmUserHandler} visible={visible === 0 ? 1 : 0}>
         UnConfirm
       </Button>
     </div>

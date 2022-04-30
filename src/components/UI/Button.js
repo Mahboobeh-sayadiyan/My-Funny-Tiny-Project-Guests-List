@@ -5,9 +5,13 @@ function Button(props) {
   const visible = props.visible;
   const classes = `${styles.button} ${visible === 0 ? styles.invisible : ""}`;
   return (
-    <div onClick={props.onclick} className={classes}>
+    <button
+      type={props.type || "button"}
+      onClick={props.onClick}
+      className={classes}
+    >
       {props.children}
-    </div>
+    </button>
   );
 }
 

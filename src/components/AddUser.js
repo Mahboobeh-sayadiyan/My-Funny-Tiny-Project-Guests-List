@@ -45,15 +45,15 @@ function AddUser(props) {
           This Application helps you to make an invitation list of your guests
         </h4>
       </div>
-      <form className={styles.input} onSubmmit={addValidationHandler}>
+      <form className={styles.input} onSubmit={addValidationHandler}>
         <label>Guest Name</label>
         <input value={guest} onChange={guestChangeHandler}></input>
         <label>Count of Guests</label>
         <input value={guestCount} onChange={guestCountChangeHandler}></input>
         <label>Phone Number</label>
         <input value={phoneNumber} onChange={phoneNumberChangeHandler}></input>
-        <Button type="submmit">Add New Guest</Button>
-        <Button onclick={props.onRemoveAlluser}>Remove All Guest</Button>
+        <Button type="submit">Add New Guest</Button>
+        <Button onClick={props.onRemoveAlluser}>Remove All Guest</Button>
       </form>
     </Container>
   );
