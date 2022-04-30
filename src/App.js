@@ -3,6 +3,8 @@ import AddUser from "./components/AddUser";
 import Users from "./components/Users";
 import Overlay from "./components/UI/Overlay";
 import MessageModal from "./components/UI/MessageModal";
+import Wrapper from "./components/Helper/Wrapper";
+import ReactDOM from "react-dom";
 
 function App() {
   const [errorMessage, seterrorMessage] = useState("");
@@ -16,6 +18,7 @@ function App() {
     localStorage.setItem("userInformation", JSON.stringify(newUsers));
   };
   const showErrorHandler = (message) => {
+    console.log("here");
     seterrorMessage(message);
     setvisible(true);
   };
@@ -47,13 +50,20 @@ function App() {
     localStorage.setItem("userInformation", JSON.stringify(newUsers));
   };
   return (
-    <div>
-      <Overlay visible={visible} />
-      <MessageModal
-        onCloseModal={closeModalHandler}
-        visible={visible}
-        message={errorMessage}
-      />
+    <Wrapper>
+      {ReactDOM.createPortal(
+        <Overlay visible={visible} onOverlayClick={closeModalHandler} />,
+        document.getElementById("root-overlay")
+      )}
+      {ReactDOM.createPortal(
+        <MessageModal
+          onCloseModal={closeModalHandler}
+          visible={visible}
+          message={errorMessage}
+        />,
+        document.getElementById("root-modal")
+      )}
+
       <AddUser
         onShowError={showErrorHandler}
         onSaveNewUser={SaveNewUserHandler}
@@ -65,7 +75,7 @@ function App() {
         onUnConfirmUser={unConfirmUserHandler}
         users={users}
       />
-    </div>
+    </Wrapper>
   );
 }
 

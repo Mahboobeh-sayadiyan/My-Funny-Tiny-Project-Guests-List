@@ -11,7 +11,7 @@ function MessageModal(props) {
       </div>
       <div className={styles.content}>{props.message}</div>
       <div className={styles.actions}>
-        <Button onclick={props.onCloseModal}>Okay</Button>
+        <Button onClick={props.onCloseModal}>Okay</Button>
       </div>
     </div>
   );

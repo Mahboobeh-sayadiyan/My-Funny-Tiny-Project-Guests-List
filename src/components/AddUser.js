@@ -16,7 +16,8 @@ function AddUser(props) {
   const phoneNumberChangeHandler = (e) => {
     setPhoneNumber(e.target.value);
   };
-  const addValidationHandler = () => {
+  const addValidationHandler = (e) => {
+    e.preventDefault();
     if (
       guest != null &&
       Number(guestCount) > 0 &&
