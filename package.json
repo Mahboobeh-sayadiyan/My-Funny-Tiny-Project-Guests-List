@@ -5,6 +5,8 @@
   "url": "https://sayadiyan.com/",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sayadiyan.com/",
+  "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
