@@ -47,6 +47,9 @@ function AddUser(props) {
     // setguestCount("");
     // setguest("");
     // setPhoneNumber("");
+    guestRef.current.value = "";
+    guestCountRef.current.value = "";
+    phoneNumberRef.current.value = "";
   };
   return (
     <Container>
